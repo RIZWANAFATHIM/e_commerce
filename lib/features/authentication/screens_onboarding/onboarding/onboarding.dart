@@ -1,3 +1,7 @@
+import 'package:e_commerce/utils/constants/image_strings.dart';
+import 'package:e_commerce/utils/constants/sizes.dart';
+import 'package:e_commerce/utils/constants/text_strings.dart';
+import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatelessWidget {
@@ -13,7 +17,22 @@ class OnBoardingScreen extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  Image(image: AssetImage(""))
+                  Image(
+                    width: THelperFunctions.screenWidth() * 0.8,
+                    height: THelperFunctions.screenHeight() * 0.6,
+                    image: AssetImage(TImages.onBoardingImage1),
+                  ),
+                  Text(
+                    TTexts.onBoardingTitle1,
+                    style: Theme.of(context).textTheme.headlineMedium,
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
+                  Text(
+                    TTexts.onBoardingSubTitle1,
+                    style: Theme.of(context).textTheme.headlineMedium,
+                    textAlign: TextAlign.center,
+                  ),
                 ],
               )
             ],

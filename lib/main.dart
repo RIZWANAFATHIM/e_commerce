@@ -1,6 +1,7 @@
-import 'package:e_commerce/features/authentication/screens_onboarding/onboarding/onboarding.dart';
 import 'package:e_commerce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'features/authentication/screens/onboarding/onboarding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,

@@ -3,10 +3,10 @@ import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../widgets/onboarding_dot_navigation.dart';
-import '../widgets/onboarding_next_button.dart';
-import '../widgets/onboarding_page.dart';
-import '../widgets/onboarding_skip.dart';
+import '../widgets/onboarding/onboarding_dot_navigation.dart';
+import '../widgets/onboarding/onboarding_next_button.dart';
+import '../widgets/onboarding/onboarding_page.dart';
+import '../widgets/onboarding/onboarding_skip.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});

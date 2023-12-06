@@ -1,24 +1,15 @@
-import 'package:e_commerce/utils/theme/theme.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'features/authentication/screens/onboarding/onboarding.dart';
+import 'appbar.dart';
 
 void main() {
+  // widgets binding
+  //init local storage
+  // await native splash
+  //initialize firebase
+  //initialize authentication
+
+
+
   runApp(const MyApp());
 }
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
-      theme: TAppTheme.lightTheme,
-      darkTheme: TAppTheme.darkTheme,
-      home: const OnBoardingScreen(),
-    );
-  }
-}
-

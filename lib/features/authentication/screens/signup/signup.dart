@@ -1,5 +1,5 @@
-import 'package:e_commerce/common/widgets_login_signup/form_divider.dart';
-import 'package:e_commerce/common/widgets_login_signup/social_buttons.dart';
+import 'package:e_commerce/common/widgets_login_signup/login_signup/form_divider.dart';
+import 'package:e_commerce/common/widgets_login_signup/login_signup/social_buttons.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +8,6 @@ import 'widgets/signup_form.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +24,7 @@ class SignupScreen extends StatelessWidget {
 
 
             ///form
-            TSignupForm(),
+            const TSignupForm(),
             const SizedBox(height: TSizes.spaceBtwSections),
 
             ///divider

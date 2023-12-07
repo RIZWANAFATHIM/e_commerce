@@ -47,7 +47,7 @@ class TTexts{
   static const String forgetPasswordSubTitle = "Don't worry sometimes google can forget too, enter your email and we will send you a password reset link.";
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
   static const String changeYourPasswordSubTitle = "Your Account Security is Our Priority! We've Sent you a Secure Link to Safely Change your Password and Keep Your Account Protected.";
-  static const String confirmEmail = "verify your email address";
+  static const String confirmEmail = "Verify your email address!";
   static const String confirmEmailSubTitle = "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
   static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";
   static const String yourAccountedCreatedTitle = "Your account successfully created!";

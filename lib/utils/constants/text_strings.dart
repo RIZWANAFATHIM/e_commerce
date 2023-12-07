@@ -17,7 +17,6 @@ class TTexts{
   static const String onBoardingSubTitle3 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
 
   // authentication form text
-  static const String and = " and ";
   static const String firstName = "First Name";
   static const String lastName = "Last Name";
   static const String email = "E-Mail";
@@ -37,6 +36,8 @@ class TTexts{
   static const String verificationCode = "verification code";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn  = "Resend email in";
+  static const String and = " and ";
+  static const String done = "done";
 
 
   // authentication headings text

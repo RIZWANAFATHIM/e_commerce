@@ -3,10 +3,14 @@
 class TTexts{
 
   // global texts
-
   static const String submit  = "Submit";
   static const String appName = "Ur Choice";
   static const String tContinue = "Continue";
+  static const String and = " and ";
+  static const String done = "Done";
+  static const String skip = "Skip";
+
+
   //onboarding texts
   static const String onBoardingTitle1  = "Choose your Product";
   static const String onBoardingTitle2 = "Select Payment Method";
@@ -15,6 +19,7 @@ class TTexts{
   static const String onBoardingSubTitle1 = "Welcome to a World of Limitless Choices - Your Perfect Product Awaits!";
   static const String onBoardingSubTitle2 = "For Seamless Transaction, Choose Your Payment Path - Your Convenience, Our Priority!";
   static const String onBoardingSubTitle3 = "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
+
 
   // authentication form text
   static const String firstName = "First Name";
@@ -36,8 +41,7 @@ class TTexts{
   static const String verificationCode = "verification code";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn  = "Resend email in";
-  static const String and = " and ";
-  static const String done = "done";
+
 
 
   // authentication headings text
@@ -53,4 +57,10 @@ class TTexts{
   static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";
   static const String yourAccountedCreatedTitle = "Your account successfully created!";
   static const String yourAccountedCreatedSubTitle = "Welcome to Your Ultimate Shopping Destination, Your Account is Created, Unleash the Joy of Seamless Online Shopping";
+
+
+
+  //--home
+  static const String homeAppbarTitle = "Good day for Shopping";
+  static const String homeAppbarSubTitle = "Tainoor Sikander";
 }

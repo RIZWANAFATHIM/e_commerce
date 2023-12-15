@@ -37,4 +37,10 @@ class TImages{
   static const String jewelleryIcon = "assets/icons/jewellery.png";
   static const String electronicsIcon = "assets/icons/electronics.png";
 
+
+  // ---banners
+  static const String promoBanner1 = "assets/images/banner1.png";
+  static const String promoBanner2 = "assets/images/-new-arrival-.jpg";
+  static const String promoBanner3 = "assets/images/65% off-shoes.png";
+
 }

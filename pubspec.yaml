@@ -64,7 +64,7 @@ dependencies:
   json_serializable: ^6.7.1
 
   #utility Packages
-  intl: ^0.18.1
+  intl: ^0.19.0
   logger: ^2.0.2+1
   url_launcher: ^6.1.12
   smooth_page_indicator: ^1.1.0

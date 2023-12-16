@@ -122,6 +122,7 @@ flutter:
     - assets/images/
     - assets/animation/
     - assets/logos/
+    - assets/products/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

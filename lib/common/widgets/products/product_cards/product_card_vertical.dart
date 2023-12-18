@@ -9,6 +9,7 @@ import '../../../../utils/constants/sizes.dart';
 import '../../../styles/shadows.dart';
 import '../../custom_shapes/containers/rounded_container.dart';
 import '../../icons/t_circular_icon.dart';
+import '../../texts/product_price_text.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key});
@@ -17,7 +18,9 @@ class TProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
 
-    return Container(
+    return GestureDetector(
+      onTap: () {},
+     child: Container(
       width: 180,
       padding: const EdgeInsets.all(1),
       decoration: BoxDecoration(
@@ -71,16 +74,41 @@ class TProductCardVertical extends StatelessWidget {
                   children: [
                     Text('Nike', overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium),
                     const SizedBox(width: TSizes.xs),
-                    const Icon(Iconsax.verify5, color: TColors.primary, size: TSizes.iconXs,)
+                    const Icon(Iconsax.verify5, color: TColors.primary, size: TSizes.iconXs),
                   ],
                 ),
 
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ///Price
+                    const TProductPriceText(price: '40.0'),
+
+                    ///add to cart button
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: TColors.dark,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(TSizes.cardRadiusMd),
+                          bottomRight: Radius.circular(TSizes.productImageRadius),
+                        ),
+                      ),
+                      child: const SizedBox(
+                        width: TSizes.iconLg * 1.2,
+                        height: TSizes.iconLg * 1.2,
+                        child: Center(child: Icon(Iconsax.add, color: TColors.white)),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           )
         ],
       ),
+     ),
     );
   }
 }
+
 

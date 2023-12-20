@@ -80,7 +80,7 @@ class StoreScreen extends StatelessWidget {
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           const TBrandTitleWithVerifiedIcon(title: 'Nike', brandTextSize: TextSizes.large),
-                                          Text('256 products with asjoso sj',
+                                          Text('256 products',
                                             overflow: TextOverflow.ellipsis,
                                             style: Theme.of(context).textTheme.labelMedium,
                                           ),

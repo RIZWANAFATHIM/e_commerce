@@ -4,7 +4,7 @@ class TTexts{
 
   // global texts
   static const String submit  = "Submit";
-  static const String appName = "Ur Choice";
+  static const String appName = "Zephyr";
   static const String tContinue = "Continue";
   static const String and = " and ";
   static const String done = "Done";

@@ -22,14 +22,14 @@ class HomeScreen extends StatelessWidget {
             ///header
             const TPrimaryHeaderContainer(
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+             //   crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ///-- appbar
                  THomeAppBar(),
                   SizedBox(height: TSizes.spaceBtwSections),
 
                   ///-- searchbar
-                 TSearchContainer(text: 'Search in Store'),
+                 TSearchContainer(text: 'Search in Store', showBorder: false,),
                  SizedBox(height: TSizes.spaceBtwSections),
 
                   ///-- categories

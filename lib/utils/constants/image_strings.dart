@@ -1,4 +1,5 @@
 ///this class contains all the app images in string formats
+library;
 
 class TImages{
 
@@ -49,6 +50,8 @@ class TImages{
   static const String promoBanner3 = "assets/images/65% off-shoes.png";
   static const String promoBanner4 = "assets/images/banner4.jpg";
 
+  // ---profile
+  static const String user = "assets/images/user.png";
 
   // ---products
   static const String productImage1 = "assets/products/pr img1.avif";
@@ -112,6 +115,26 @@ class TImages{
   static const String productImage59 = "assets/products/pr img27.1.jpeg";
   static const String productImage60 = "assets/products/pr img30.1.jpeg";
   static const String productImage61 = "";
+
+
+  // ---adidas shoe imgs
+  static const String adidas_shoes1 = "assets/adidas_shoe_images/adidas shoe1.jpeg";
+  static const String adidas_shoes11 = "assets/adidas_shoe_images/adidas shoe1.1.jpeg";
+  static const String adidas_shoes111 = "assets/adidas_shoe_images/adidas shoe1.2.jpeg";
+  static const String adidas_shoes1111 = "assets/adidas_shoe_images/adidas shoe1.3.jpeg";
+  static const String adidas_shoes2 = "assets/adidas_shoe_images/adidas shoe2.jpeg";
+  static const String adidas_shoes22 = "assets/adidas_shoe_images/adidas shoe2.1.jpeg";
+  static const String adidas_shoes222 = "assets/adidas_shoe_images/adidas shoe2.2.jpeg";
+  static const String adidas_shoes2222 = "assets/adidas_shoe_images/adidas shoe2.3.jpeg";
+  static const String adidas_shoes3 = "assets/adidas_shoe_images/adidas shoe3.avif";
+  static const String adidas_shoes33 = "assets/adidas_shoe_images/adidas shoe3.1.jpg";
+  static const String adidas_shoes333 = "assets/adidas_shoe_images/adidas shoe3.2.jpeg";
+  static const String adidas_shoes3333 = "assets/adidas_shoe_images/adidas shoe3.3.jpeg";
+  static const String adidas_shoes4 = "assets/adidas_shoe_images/adidas shoe4.jpeg";
+  static const String adidas_shoes44 = "assets/adidas_shoe_images/adidas shoe4.1.jpeg";
+  static const String adidas_shoes444 = "assets/adidas_shoe_images/adidas shoe4.2.jpeg";
+  static const String adidas_shoes4444 = "assets/adidas_shoe_images/adidas shoe4.3.jpeg";
+
 
 
 }

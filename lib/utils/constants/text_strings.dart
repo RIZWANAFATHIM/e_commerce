@@ -1,4 +1,5 @@
 ///this class contains all the app text in string formats
+library;
 
 class TTexts{
 

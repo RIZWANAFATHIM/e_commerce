@@ -1,5 +1,6 @@
 ///list of enums
 ///they cannot be credited inside a class
+library;
 
 enum TextSizes {small, medium, large}
 

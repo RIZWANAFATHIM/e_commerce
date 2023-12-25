@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                const TLoginForm(),
 
             ///divider
-               TFormDivider(dividerText: TTexts.orSignInWith.capitalize!),
+               TFormDivider(dividerText: TTexts.orSignInWith.capitalize),
               const SizedBox(height: TSizes.spaceBtwSections),
               
               ///footer

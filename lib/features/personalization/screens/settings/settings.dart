@@ -1,13 +1,15 @@
-import 'package:e_commerce/common/widgets/appbar/appbar.dart';
-import 'package:e_commerce/common/widgets/custom_shapes/containers/primary_header_container.dart';
-import 'package:e_commerce/common/widgets/list_tile/settings_menu_tile.dart';
-import 'package:e_commerce/common/widgets/texts/section_heading.dart';
-import 'package:e_commerce/utils/constants/sizes.dart';
+import 'package:e_commerce/common/widgets/list_tile/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import '../../../../common/widgets/list_tile/user_profile.dart';
+import '../../../../common/widgets/appbar/appbar.dart';
+import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
+import '../../../../common/widgets/list_tile/settings_menu_tile.dart';
+import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/sizes.dart';
+import '../../../shop/screens/order/order.dart';
+import '../address/address.dart';
 import '../profile/profile.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -18,74 +20,119 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
+          // to add header
           children: [
-            /// --header
             TPrimaryHeaderContainer(
                 child: Column(
                   children: [
                     TAppBar(
-                      title: Text('Account', style: Theme.of(context).textTheme.headlineMedium!.apply(color: TColors.white))),
-                    const SizedBox(height: TSizes.spaceBtwSections),
+                      title: Text(
+                        "Account",
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineMedium!
+                            .apply(color: TColors.white),
+                      ),
+                    ),
 
-                    ///--user profile
-                    TUserProfile(onPressed: () => Get.to(() => const ProfileScreen()),),
-                    const SizedBox(height: TSizes.spaceBtwSections)
+                    //profile
+                    TUserProfile(onPressed: () => Get.to(()=> const ProfileScreen()),),
+                    const SizedBox(
+                      height: TSizes.spaceBtwSections,
+                    ),
                   ],
                 )
             ),
-            
-            ///--body
-              Padding(
-                padding: const EdgeInsets.all(TSizes.defaultSpace),
+
+            Padding(padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-                  ///--account settings
-                  const TSectionHeading(title: 'Account Settings', showActionButton: false),
-                  const SizedBox(height: TSizes.spaceBtwItems),
-                  
-                  const TSettingsMenuTile(icon: Iconsax.safe_home, title: 'My Address', subTitle: 'Set shopping delivery address'),
-                  const TSettingsMenuTile(icon: Iconsax.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout'),
-                  const TSettingsMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In progress and Complete Orders'),
-                  const TSettingsMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Withdraw balance to registered bank account'),
-                  const TSettingsMenuTile(icon: Iconsax.discount_shape, title: 'My Coupons', subTitle: 'List of all the discounted coupons'),
-                  const TSettingsMenuTile(icon: Iconsax.notification, title: 'Notifications', subTitle: 'Set any kind of notification message'),
-                  const TSettingsMenuTile(icon: Iconsax.security_card, title: 'Account Privacy', subTitle: 'Manage data usage and connected accounts'),
 
-                  /// --app settings
-                  const SizedBox(height: TSizes.spaceBtwSections),
-                  const TSectionHeading(title: 'App Settings', showActionButton: false),
-                  const SizedBox(height: TSizes.spaceBtwItems),
-                  const TSettingsMenuTile(icon: Iconsax.document_upload, title: 'Load Data', subTitle: 'Upload Data to your Cloud Firebase'),
-                  TSettingsMenuTile(
-                      icon: Iconsax.location,
-                      title: 'Geolocation',
-                      subTitle: 'Set recommendation based on location',
-                      trailing: Switch(value: true, onChanged: (value) {}),
+                  //Account Settings
+                  const TSectionHeading(title: "Account Setting", showActionButton: false,),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
+
+                  TSettingsMenuTile(icon: Iconsax.safe_home,
+                    title: 'Addresses',
+                    subTitle: "Set Delivery Address",
+                    onTap: () => Get.to(()=> const UserAddressScreen()),
                   ),
-                  TSettingsMenuTile(
-                      icon: Iconsax.security_user,
-                      title: 'Safe Mode',
-                      subTitle: 'Search result is safe for all ages',
-                      trailing: Switch(value: false, onChanged: (value) {}),
+                  TSettingsMenuTile(icon: Iconsax.shopping_cart,
+                    title: 'My Cart',
+                    subTitle: "Checkout items added to cart",
+                    onTap: () {},
                   ),
-                  TSettingsMenuTile(
-                      icon: Iconsax.image,
-                      title: 'HD Image Quality',
-                      subTitle: 'Set image quality to be seen',
-                      trailing: Switch(value: false, onChanged: (value) {}),
+                  TSettingsMenuTile(icon: Iconsax.bag_tick,
+                    title: 'Orders',
+                    subTitle: "Details of products you ordered",
+                    onTap: ()  => Get.to(()=> const OrderScreen()),
                   ),
-                  const SizedBox(height: TSizes.spaceBtwSections),
-                  SizedBox(width: double.infinity,
-                    child: OutlinedButton(onPressed: () {}, child: const Text('Logout')),
+                  TSettingsMenuTile(icon: Iconsax.bank,
+                    title: 'Payment Methods',
+                    subTitle: "Linked payment methods , upi , bank etc",
+                    onTap: () {},
                   ),
-                  const SizedBox(height: TSizes.spaceBtwSections * 2.5),
+                  TSettingsMenuTile(icon: Iconsax.discount_shape1,
+                    title: "Coupons",
+                    subTitle: "Coupons available for you",
+                    onTap: () {},
+                  ),
+                  TSettingsMenuTile(icon: Iconsax.notification,
+                    title: 'Notifications',
+                    subTitle: "Notifications for you",
+                    onTap: () {},
+                  ),
+                  TSettingsMenuTile(icon: Iconsax.setting,
+                    title: 'Account Privacy',
+                    subTitle: "Manage connected accounts",
+                    onTap: () {},
+                  ),
+
+                  const SizedBox(height: TSizes.spaceBtwSections,),
+                  const TSectionHeading(title: "App Settings" ,showActionButton: false,),
+                  const SizedBox(height: TSizes.spaceBtwItems,),
+                  TSettingsMenuTile(icon: Iconsax.document_upload1, title: "Load Data", subTitle: "Cloudil add cheyyan olla data", onTap: () {}),
+
+                  TSettingsMenuTile(icon: Iconsax.location,
+                    title: "Location",
+                    subTitle:"Set recommendations based on location",
+                    trailing:Switch(value: true,onChanged: (value) {}),
+                    onTap: (){},
+                  ),
+
+                  TSettingsMenuTile(icon: Iconsax.security_user1,
+                    title: "Privacy Mode",
+                    subTitle:"for 18+ lalala",
+                    trailing:Switch(value: false,onChanged: (value) {}),
+                    onTap: (){},
+                  ),
+
+                  TSettingsMenuTile(icon: Iconsax.image,
+                    title: "Quality Settings",
+                    subTitle:"Set image quality ",
+                    trailing:Switch(value: true,onChanged: (value) {}),
+                    onTap: (){},
+                  ),
+
+                  ///Logout
+
+                  const SizedBox(height: TSizes.spaceBtwSections,),
+                  SizedBox(
+                    width:double.infinity,
+                    child: OutlinedButton(onPressed: (){}, child: const Text("Logout"),),
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwSections*2.5,)
+
                 ],
-              ),
-            ),
+              ),)
+
           ],
+
+
+
+
         ),
       ),
     );
   }
 }
-

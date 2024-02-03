@@ -44,6 +44,12 @@ class TImages{
   static const String ckIcon = "assets/icons/ck icon.png";
   static const String pumaIcon = "assets/icons/puma icon.webp";
 
+  // --icons
+  static const String gpay = "assets/icons/google-pay-icon.webp";
+  static const String payment_success = "assets/icons/payment successful icon.png";
+  static const String payment_success1 = "assets/icons/Payment-success icon2.png";
+  static const String purchase_success = "assets/icons/Purchase_Success icon.png";
+
   // ---banners
   static const String promoBanner1 = "assets/images/banner1.png";
   static const String promoBanner2 = "assets/images/-new-arrival-.jpg";
